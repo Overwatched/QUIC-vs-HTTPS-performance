@@ -1,0 +1,12 @@
+
+---HTTP 10 tests---
+repeat 10 {lighthouse https://www.youtube.com --view --perf --disable-cpu-throttling --disable-device-emulation --disable-network-throttling}
+
+---QUIC 10 tests---
+repeat 10 {lighthouse https://www.youtube.com --view --perf --disable-cpu-throttling --disable-device-emulation --disable-network-throttling --chrome-flags="--enable-quic --origin-to-force-quic-on=www.youtube.com:433"}
+
+---Set network delay---
+sudo tc qdisc add dev wlp4s0 root netem delay 250ms
+
+---Reset network delay---
+sudo tc qdisc del dev wlp4s0 root netem
