@@ -3,7 +3,11 @@ This is a small assignment that compares QUIC (and HTTP) vs the HTTPS stack (TCP
 
 This examination uses the Lighthouse tool and the Google Devloper Tool in order to take measurements, each measurement has been measured ten times, and an average calculation is used in order to reduce the impact of singular (strange) metrics. You can read more about this in papers, that might be linked here after they have been approved. :)
 
-## Here are some images of the result
+## Additional calculations
+<img src="images/devtools_additional_calc.png" width="60%" height="60%">
+<img src="images/lighthouse_additional_calc.png" width="70%" height="70%">
+
+## Baseline result
 <img src="images/devtools_average.png" width="70%" height="70%">
 <img src="images/devtools_percentage.png" width="70%" height="70%">
 <img src="images/lighthouse_average.png" width="70%" height="70%">
